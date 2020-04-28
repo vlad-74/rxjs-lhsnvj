@@ -1,7 +1,5 @@
-import { Observable, Subject, BehaviorSubject, ReplaySubject, AsyncSubject, interval, of, from } from 'rxjs'; 
+import { Observable, Subject, BehaviorSubject, ReplaySubject, AsyncSubject, interval, of, from, fromEvent } from 'rxjs'; 
 import { map, multicast, refCount } from 'rxjs/operators';
-
-import {fromEvent} from 'rxjs';
 
 fromEvent(document, 'mousemove').subscribe(ev => {
   console.log('Mouse event: ', ev);
